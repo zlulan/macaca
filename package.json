@@ -1,0 +1,32 @@
+{
+  "name": "macaca-test-sample",
+  "version": "0.1.0",
+  "description": "macaca-test-sample",
+  "keywords": [
+    "sample"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/macaca-test-sample.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jshint": "*",
+    "pre-commit": "1.1.1",
+    "webdriver-client": "~1.0.0"
+  },
+  "scripts": {
+    "test": "make test",
+    "jshint": "make jshint"
+  },
+  "pre-commit": [
+    "jshint"
+  ],
+  "homepage": "https://github.com/xudafeng/macaca-test-sample",
+  "author": "xudafeng",
+  "email": "xudafeng@126.com",
+  "blog": "http://xdf.me",
+  "license": "MIT"
+}
