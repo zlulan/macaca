@@ -43,7 +43,7 @@ describe('macaca test sample', function() {
 
   it('#2 should display home', function() {
     return driver
-      .takeScreenshot()
+      .takeScreenshot();
   });
 
   it('#3 should display webview', function() {
@@ -51,7 +51,7 @@ describe('macaca test sample', function() {
       .elementByName('Webview')
       .click()
       .sleep(3000)
-      .takeScreenshot()
+      .takeScreenshot();
   });
 
   it('#4 should go into webview', function() {
@@ -67,7 +67,7 @@ describe('macaca test sample', function() {
       .elementById('popView')
       .click()
       .sleep(1000)
-      .takeScreenshot()
+      .takeScreenshot();
   });
 
   it('#5 should go into test', function() {
@@ -80,7 +80,7 @@ describe('macaca test sample', function() {
       .elementByName('Baidu')
       .click()
       .sleep(5000)
-      .takeScreenshot()
+      .takeScreenshot();
   });
 
   it('#6 should works with web', function() {
@@ -97,9 +97,9 @@ describe('macaca test sample', function() {
       .sleep(5000)
       .source()
       .then(function(html) {
-        html.should.containEql('TesterHome')
+        html.should.containEql('TesterHome');
       })
-      .takeScreenshot()
+      .takeScreenshot();
   });
 
   it('#7 should logout success', function() {
@@ -116,6 +116,6 @@ describe('macaca test sample', function() {
       .elementByName('Logout')
       .click()
       .sleep(1000)
-      .takeScreenshot()
+      .takeScreenshot();
   });
 });
