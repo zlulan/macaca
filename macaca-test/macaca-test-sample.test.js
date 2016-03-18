@@ -15,9 +15,11 @@
 
 var path = require('path');
 
+var platform = process.env.platform || 'iOS';
+
 var wd = require('webdriver-client')({
-  platformName: 'iOS',
-  app: path.join(__dirname, '..', 'app', 'ios-app-bootstrap.zip')
+  platformName: platform,
+  app: path.join(__dirname, '..', 'app', `${platform.toLowerCase()}-app-bootstrap.zip`)
 });
 
 describe('macaca test sample', function() {
@@ -56,27 +58,20 @@ describe('macaca test sample', function() {
 
   it('#4 should go into webview', function() {
     return driver
-      .contexts()
-      .then(function(arr) {
-        return driver
-          .context(arr[arr.length - 1]);
-      })
+      .webview()
       .elementById('pushView')
-      .click()
-      .sleep(1000)
+      .tap()
+      .sleep(5000)
+      .webview()
       .elementById('popView')
-      .click()
-      .sleep(1000)
+      .tap()
+      .sleep(5000)
       .takeScreenshot();
   });
 
   it('#5 should go into test', function() {
     return driver
-      .contexts()
-      .then(function(arr) {
-        return driver
-          .context(arr[0]);
-      })
+      .native()
       .elementByName('Baidu')
       .click()
       .sleep(5000)
@@ -85,15 +80,11 @@ describe('macaca test sample', function() {
 
   it('#6 should works with web', function() {
     return driver
-      .contexts()
-      .then(function(arr) {
-        return driver
-          .context(arr[arr.length - 1]);
-      })
+      .webview()
       .elementById('index-kw')
       .sendKeys('TesterHome')
       .elementById('index-bn')
-      .click()
+      .tap()
       .sleep(5000)
       .source()
       .then(function(html) {
