@@ -5,7 +5,7 @@ all: test
 install:
 	@npm install
 test: install
-	macaca run --server --verbose
+	platform=${platform} macaca run --server --verbose
 jshint:
 	@${npm_bin}/jshint .
 .PHONY: test
