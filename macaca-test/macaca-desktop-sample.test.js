@@ -13,13 +13,9 @@
 
 'use strict';
 
-var path = require('path');
-
-var platform = process.env.platform || 'desktop';
-
 var wd = require('webdriver-client')({
-  platformName: platform,
-  browser: 'chrome'
+  platformName: 'desktop',
+  browserName: 'chrome'
 });
 
 describe('macaca desktop sample', function() {
@@ -32,16 +28,49 @@ describe('macaca desktop sample', function() {
     return driver
       .init()
       .setNormalSize()
-      .then(initialURL)
-      .then((url) => {
-        return driver
-          .get(url);
-      })
       .end(done);
   });
 
-  it('#1 should', () => {
-    return driver;
+  it('#0 should go into macaca', function() {
+    return driver
+      .get(initialURL)
+      .sleep(3000);
+  });
+
+  it('#1 should works with macaca', function() {
+    return driver
+      .elementById('kw')
+      .sendKeys('macaca')
+      .sleep(3000)
+      .elementById('su')
+      .click()
+      .sleep(5000)
+      .source()
+      .then(function(html) {
+        html.should.containEql('macaca');
+      })
+      .takeScreenshot();
+  });
+
+  it('#2 should go into web', function() {
+    return driver
+      .get(initialURL)
+      .sleep(3000);
+  });
+
+  it('#3 should works with web', function() {
+    return driver
+      .elementById('kw')
+      .sendKeys('TesterHome')
+      .sleep(3000)
+      .elementById('su')
+      .click()
+      .sleep(5000)
+      .source()
+      .then(function(html) {
+        html.should.containEql('TesterHome');
+      })
+      .takeScreenshot();
   });
 
   after((done) => {

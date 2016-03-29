@@ -95,11 +95,7 @@ describe('macaca mobile sample', function() {
 
   it('#7 should logout success', function() {
     return driver
-      .contexts()
-      .then(function(arr) {
-        return driver
-          .context(arr[0]);
-      })
+      .native()
       .elementByName('PERSONAL')
       .click()
       .sleep(1000)
