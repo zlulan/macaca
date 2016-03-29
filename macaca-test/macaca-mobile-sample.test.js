@@ -22,7 +22,7 @@ var wd = require('webdriver-client')({
   app: path.join(__dirname, '..', 'app', `${platform.toLowerCase()}-app-bootstrap.zip`)
 });
 
-describe('macaca test sample', function() {
+describe('macaca mobile sample', function() {
   this.timeout(5 * 60 * 1000);
 
   var driver = wd.initPromiseChain();
@@ -95,11 +95,7 @@ describe('macaca test sample', function() {
 
   it('#7 should logout success', function() {
     return driver
-      .contexts()
-      .then(function(arr) {
-        return driver
-          .context(arr[0]);
-      })
+      .native()
       .elementByName('PERSONAL')
       .click()
       .sleep(1000)
