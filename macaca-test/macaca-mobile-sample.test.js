@@ -14,13 +14,25 @@
 'use strict';
 
 var path = require('path');
+var _ = require('macaca-utils');
 
 var platform = process.env.platform || 'iOS';
+platform = platform.toLowerCase();
 
-var wd = require('webdriver-client')({
-  platformName: platform,
-  app: path.join(__dirname, '..', 'app', `${platform.toLowerCase()}-app-bootstrap.zip`)
-});
+var iOSOpts = {
+  platformName: 'iOS',
+  //bundleId: 'xudafeng.ios-app-bootstrap',
+  app: path.join(__dirname, '..', 'app', `${platform}-app-bootstrap.zip`)
+};
+
+var androidOpts = {
+  platformName: 'Android',
+  //package: 'com.github.android_app_bootstrap',
+  //activity: 'com.github.android_app_bootstrap.activity.WelcomeActivity',
+  app: path.join(__dirname, '..', 'app', `${platform}-app-bootstrap.zip`)
+};
+
+var wd = require('webdriver-client')(_.merge({}, platform === 'ios' ? iOSOpts : androidOpts));
 
 describe('macaca mobile sample', function() {
   this.timeout(5 * 60 * 1000);
