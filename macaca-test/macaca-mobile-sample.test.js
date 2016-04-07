@@ -20,6 +20,8 @@ var platform = process.env.platform || 'iOS';
 platform = platform.toLowerCase();
 
 var iOSOpts = {
+  platformVersion: '9.3',
+  deviceName: 'iPhone 5s',
   platformName: 'iOS',
   //bundleId: 'xudafeng.ios-app-bootstrap',
   app: path.join(__dirname, '..', 'app', `${platform}-app-bootstrap.zip`)
@@ -27,6 +29,7 @@ var iOSOpts = {
 
 var androidOpts = {
   platformName: 'Android',
+  browserName: 'chrome',
   //package: 'com.github.android_app_bootstrap',
   //activity: 'com.github.android_app_bootstrap.activity.WelcomeActivity',
   app: path.join(__dirname, '..', 'app', `${platform}-app-bootstrap.zip`)
