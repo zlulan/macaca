@@ -27,7 +27,7 @@ describe('macaca desktop sample', function() {
   before(() => {
     return driver
       .initDriver()
-      .setWindowSize(1280, 960);
+      .setWindowSize(1280, 800);
   });
 
   it('#0 should go into macaca', function() {
