@@ -10,9 +10,9 @@ test:
 	@echo "make test-android         Test sample for Android"
 	@echo "make test-pc              Test sample for PC"
 test-ios: install
-	platform=ios macaca run --server --verbose -d ./macaca-test/macaca-mobile-sample.test.js
+	platform=ios macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 test-android: install
-	platform=android macaca run --server --verbose -d ./macaca-test/macaca-mobile-sample.test.js
+	platform=android macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 test-pc:
 	macaca run --verbose -d ./macaca-test/macaca-desktop-sample.test.js
 jshint:
