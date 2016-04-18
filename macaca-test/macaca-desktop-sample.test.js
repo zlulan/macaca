@@ -24,11 +24,10 @@ describe('macaca desktop sample', function() {
   const driver = wd.initPromiseChain();
   const initialURL = 'https://www.baidu.com';
 
-  before((done) => {
+  before(() => {
     return driver
-      .init()
-      .setNormalSize()
-      .end(done);
+      .initDriver()
+      .setWindowSize(1280, 960);
   });
 
   it('#0 should go into macaca', function() {
