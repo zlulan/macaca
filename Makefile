@@ -15,6 +15,8 @@ test-android: install
 	platform=android macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 test-pc:
 	macaca run --verbose -d ./macaca-test/macaca-desktop-sample.test.js
+travis:
+	echo test
 jshint:
 	@${npm_bin}/jshint .
 .PHONY: test
