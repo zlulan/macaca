@@ -16,14 +16,12 @@
 var platform = process.env.platform || 'iOS';
 platform = platform.toLowerCase();
 
-var iOSOpts = {
-  platformVersion: '9.3',
-  deviceName: 'iPhone 5s',
-  platformName: 'iOS',
-  browserName: 'Safari'
+var AndroidOpts = {
+  platformName: 'Android',
+  browserName: 'Chrome'
 };
 
-var wd = require('webdriver-client')(iOSOpts);
+var wd = require('webdriver-client')(AndroidOpts);
 
 describe('macaca mobile sample', function() {
   this.timeout(5 * 60 * 1000);
@@ -70,5 +68,4 @@ describe('macaca mobile sample', function() {
       })
       .takeScreenshot();
   });
-
 });
