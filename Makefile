@@ -14,9 +14,9 @@ test:
 test-ios: install
 	platform=ios macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 test-ios-safari: install
-	macaca run --verbose -d ./macaca-test/macaca-mobile-safari-sample.test.js
+	browser=safari macaca run --verbose -d ./macaca-test/macaca-mobile-browser-sample.test.js
 test-android-chrome: install
-	macaca run --verbose -d ./macaca-test/macaca-mobile-chrome-sample.test.js
+	browser=chrome macaca run --verbose -d ./macaca-test/macaca-mobile-browser-sample.test.js
 test-android: install
 	platform=android macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 test-pc:
