@@ -26,9 +26,9 @@ travis-pc:
 travis: install travis-pc
 	@echo travis passed
 travis-android: install
-	platform=android ${npm_bin} run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
+	platform=android ${npm_bin}/macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 travis-ios: install
-	platform=ios ${npm_bin} run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
+	platform=ios ${npm_bin}/macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 jshint:
 	@${npm_bin}/jshint .
 .PHONY: test
