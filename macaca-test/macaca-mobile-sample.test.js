@@ -29,7 +29,6 @@ var iOSOpts = {
 
 var androidOpts = {
   platformName: 'Android',
-  browserName: 'chrome',
   //package: 'com.github.android_app_bootstrap',
   //activity: 'com.github.android_app_bootstrap.activity.WelcomeActivity',
   app: path.join(__dirname, '..', 'app', `${platform}-app-bootstrap.zip`)
@@ -43,7 +42,8 @@ describe('macaca mobile sample', function() {
   var driver = wd.initPromiseChain();
 
   before(function() {
-    return driver.initDriver();
+    return driver
+      .initDriver();
   });
 
   after(function() {
