@@ -7,10 +7,9 @@
 
 ## CI Sample
 
-| Platform   | Status                                          |  Repo                                                                                      |
-| ---------- | ----------------------------------------------- |
----------------------------------------------------------------- |
-| Desktop PC | [![build status][travis-image-0]][travis-url-0] | [macaca-test-sample](https://github.com/xudafeng/macaca-test-sample)                       |
+| Platform   | Status                                          |  Repo              |
+| ---------- | ----------------------------------------------- | ------------------ |
+| Desktop PC | [![build status][travis-image-0]][travis-url-0] | [macaca-test-sample](https://github.com/xudafeng/macaca-test-sample)                   |
 | iOS        | [![build status][travis-image-1]][travis-url-1] | [macaca-test-sample-ios-ci](https://github.com/xudafeng/macaca-test-sample-ios-ci)         |
 | Android    | [![build status][travis-image-2]][travis-url-2] | [macaca-test-sample-android-ci](https://github.com/xudafeng/macaca-test-sample-android-ci) |
 
