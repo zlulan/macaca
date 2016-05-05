@@ -42,7 +42,7 @@ describe('macaca mobile sample', function() {
   var driver = wd.initPromiseChain();
 
   driver.configureHttp({
-    timeout: 120000
+    timeout: 600000
   });
 
   before(function() {
