@@ -9,7 +9,7 @@
 
 | Platform   | Status                                          |  Repo              |
 | ---------- | ----------------------------------------------- | ------------------ |
-| Desktop PC | [![build status][travis-image-0]][travis-url-0] | [macaca-test-sample](https://github.com/xudafeng/macaca-test-sample)                   |
+| Desktop PC | [![build status][travis-image-0]][travis-url-0] [![Circle CI][circle-image-0]][circle-url-0] | [macaca-test-sample](https://github.com/xudafeng/macaca-test-sample)                   |
 | iOS        | [![build status][travis-image-1]][travis-url-1] | [macaca-test-sample-ios-ci](https://github.com/xudafeng/macaca-test-sample-ios-ci)         |
 | Android    | [![build status][travis-image-2]][travis-url-2] | [macaca-test-sample-android-ci](https://github.com/xudafeng/macaca-test-sample-android-ci) |
 
@@ -19,6 +19,9 @@
 [travis-url-1]: https://travis-ci.org/xudafeng/macaca-test-sample-ios-ci
 [travis-image-2]: https://img.shields.io/travis/xudafeng/macaca-test-sample-android-ci.svg?style=flat-square
 [travis-url-2]: https://travis-ci.org/xudafeng/macaca-test-sample-android-ci
+
+[circle-image-0]: https://circleci.com/gh/xudafeng/macaca-test-sample.svg?style=svg
+[circle-url-0]: https://circleci.com/gh/xudafeng/macaca-test-sample
 
 ## Install
 
