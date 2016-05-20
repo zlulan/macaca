@@ -20,7 +20,7 @@
     "webdriver-client": "~1.0.0"
   },
   "scripts": {
-    "test": "make test",
+    "test": "make test-pc",
     "jshint": "make jshint"
   },
   "pre-commit": [
