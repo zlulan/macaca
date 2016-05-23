@@ -22,12 +22,15 @@ test-android: install
 test-pc:
 	macaca run --verbose -d ./macaca-test/macaca-desktop-sample.test.js
 travis-pc:
+	${npm_bin}/macaca install electron
 	${npm_bin}/macaca run -d ./macaca-test/macaca-desktop-sample.test.js --no-window
 travis: install travis-pc
 	@echo travis passed
 travis-android: install
+	${npm_bin}/macaca install android
 	platform=android ${npm_bin}/macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 travis-ios: install
+	${npm_bin}/macaca install ios
 	platform=ios ${npm_bin}/macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 jshint:
 	@${npm_bin}/jshint .
