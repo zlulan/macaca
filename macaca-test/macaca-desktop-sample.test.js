@@ -48,6 +48,16 @@ describe('macaca desktop sample', function() {
       .then(function(html) {
         html.should.containEql('macaca');
       })
+      .hasElementByCss('#head > div.head_wrapper')
+      .then(function(hasHeadWrapper) {
+        hasHeadWrapper.should.be.true();
+      })
+      .elementByXPathOrNull('//*[@id="kw"]')
+      .sendKeys(' elementByXPath')
+      .sleep(3000)
+      .elementById('su')
+      .click()
+      .sleep(5000)
       .takeScreenshot();
   });
 
