@@ -3,12 +3,13 @@
   "version": "1.0.8",
   "description": "macaca-test-sample",
   "keywords": [
+    "macaca",
     "sample"
   ],
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/xudafeng/macaca-test-sample.git"
+    "url": "git://github.com/macacajs/macaca-test-sample.git"
   },
   "dependencies": {
     "macaca-utils": "~0.1.8"
@@ -26,9 +27,6 @@
   "pre-commit": [
     "jshint"
   ],
-  "homepage": "https://github.com/xudafeng/macaca-test-sample",
-  "author": "xudafeng",
-  "email": "xudafeng@126.com",
-  "blog": "http://xdf.me",
+  "homepage": "https://github.com/macacajs/macaca-test-sample",
   "license": "MIT"
 }
