@@ -6,7 +6,6 @@
     "macaca",
     "sample"
   ],
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/macacajs/macaca-test-sample.git"
