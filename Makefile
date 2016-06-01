@@ -12,14 +12,20 @@ test:
 	@echo "make test-android-chrome  Test sample for Android Chrome"
 	@echo "make test-pc              Test sample for PC"
 test-ios: install
+	macaca doctor
 	platform=ios macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 test-ios-safari: install
+	macaca doctor
 	browser=safari macaca run --verbose -d ./macaca-test/macaca-mobile-browser-sample.test.js
 test-android-chrome: install
+	macaca doctor
 	browser=chrome macaca run --verbose -d ./macaca-test/macaca-mobile-browser-sample.test.js
 test-android: install
+	macaca doctor
 	platform=android macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 test-pc:
+	macaca install electron
+	macaca doctor
 	macaca run --verbose -d ./macaca-test/macaca-desktop-sample.test.js
 travis-pc:
 	${npm_bin}/macaca install electron
