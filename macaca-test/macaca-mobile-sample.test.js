@@ -18,7 +18,7 @@ var androidOpts = {
   platformName: 'Android',
   //package: 'com.github.android_app_bootstrap',
   //activity: 'com.github.android_app_bootstrap.activity.WelcomeActivity',
-  app: path.join(__dirname, '..', 'app', `${platform}-app-bootstrap.zip`)
+  app: path.join(__dirname, '..', 'app', `android_app_bootstrap-debug.apk`)
 };
 
 var wd = require('webdriver-client')(_.merge({}, platform === 'ios' ? iOSOpts : androidOpts));
@@ -45,7 +45,7 @@ describe('macaca mobile sample', function() {
 
   it('#1 should login success', function() {
     return driver
-      .login('12345678', '111111')
+      .login('中文+Test+12345678', '111111')
       .sleep(1000);
   });
 
@@ -88,7 +88,7 @@ describe('macaca mobile sample', function() {
     return driver
       .webview()
       .elementById('index-kw')
-      .sendKeys('TesterHome')
+      .sendKeys('中文+TesterHome')
       .elementById('index-bn')
       .tap()
       .sleep(5000)
