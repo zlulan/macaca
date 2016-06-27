@@ -18,7 +18,7 @@ var androidOpts = {
   platformName: 'Android',
   //package: 'com.github.android_app_bootstrap',
   //activity: 'com.github.android_app_bootstrap.activity.WelcomeActivity',
-  app: path.join(__dirname, '..', 'app', `android_app_bootstrap-debug.apk`)
+  app: path.join(__dirname, '..', 'app', `${platform}-app-bootstrap.zip`)
 };
 
 var wd = require('webdriver-client')(_.merge({}, platform === 'ios' ? iOSOpts : androidOpts));
