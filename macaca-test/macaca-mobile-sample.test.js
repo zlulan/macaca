@@ -54,7 +54,18 @@ describe('macaca mobile sample', function() {
       .takeScreenshot();
   });
 
-  it('#3 should display webview', function() {
+   it('#3 should scroll tableview', function() {
+    return driver
+      .elementByName('HOME')
+      .click()
+      .elementByName('list')
+      .click()
+      .swipe(200,400,200,100,500)
+      .sleep(1000)    
+  }); 
+
+
+  it('#4 should display webview', function() {
     return driver
       .elementByName('Webview')
       .click()
@@ -62,7 +73,7 @@ describe('macaca mobile sample', function() {
       .takeScreenshot();
   });
 
-  it('#4 should go into webview', function() {
+  it('#5 should go into webview', function() {
     return driver
       .webview()
       .elementById('pushView')
@@ -75,7 +86,7 @@ describe('macaca mobile sample', function() {
       .takeScreenshot();
   });
 
-  it('#5 should go into test', function() {
+  it('#6 should go into test', function() {
     return driver
       .native()
       .elementByName('Baidu')
@@ -84,7 +95,7 @@ describe('macaca mobile sample', function() {
       .takeScreenshot();
   });
 
-  it('#6 should works with web', function() {
+  it('#7 should works with web', function() {
     return driver
       .webview()
       .elementById('index-kw')
@@ -99,7 +110,7 @@ describe('macaca mobile sample', function() {
       .takeScreenshot();
   });
 
-  it('#7 should logout success', function() {
+  it('#8 should logout success', function() {
     return driver
       .native()
       .elementByName('PERSONAL')
@@ -111,4 +122,5 @@ describe('macaca mobile sample', function() {
       .sleep(1000)
       .takeScreenshot();
   });
+  
 });
